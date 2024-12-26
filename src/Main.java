@@ -9,8 +9,8 @@ public class Main {
         ll.append(70);
         System.out.println("Linked List before inserting at given postion :");
         ll.display();
-        ll.pop();
-        System.out.println("Linked List  after deleting");
+        ll.popLast();
+        System.out.println("Linked List  after deleting at last");
         ll.display();
     }
 }
