@@ -22,6 +22,15 @@ public class LinkedList {
 
          }
     }
+    public void pop(){
+        if(head==null){
+            System.out.println("Linked Listmis empty");
+            return;
+        }
+        Node temp=head;
+        head=head.next;
+        temp.next=null;
+    }
     public void insertAtPosition(int pos,int value){
         Node newNode= new Node(value);
         if(pos==0){

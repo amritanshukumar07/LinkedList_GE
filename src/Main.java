@@ -5,12 +5,12 @@ public class Main {
         System.out.println("Welcome to day 9 linked list program");
         Node start= new Node(56);
         LinkedList ll= new LinkedList(start);
+        ll.append(30);
         ll.append(70);
-
         System.out.println("Linked List before inserting at given postion :");
         ll.display();
-        ll.insertAtPosition(1,30);
-        System.out.println("Linked List  after inserting at given position:");
+        ll.pop();
+        System.out.println("Linked List  after deleting");
         ll.display();
     }
 }
