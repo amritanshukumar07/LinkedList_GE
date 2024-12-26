@@ -4,13 +4,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to day 9 linked list program");
         LinkedList ll= new LinkedList();
-        Node first= new Node(56);
-        Node second= new Node(30);
-        Node third= new Node(70);
-
-        ll.head=first;
-        first.next=second;
-        second.next=third;
+        ll.add(30);
+        ll.add(56);
+        ll.add(70);
         System.out.println("Linked List :");
         ll.display();
     }
