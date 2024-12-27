@@ -47,6 +47,19 @@ public class LinkedList {
 
         temp.next=null;
     }
+
+    public Node findNode(int key){
+        if(head==null || head.data==key) return head;
+        Node temp=head;
+        while(temp!=null){
+            if(temp.data==key){
+                return temp;
+            }
+            temp=temp.next;
+
+        }
+        return null;
+    }
     public void insertAtPosition(int pos,int value){
         Node newNode= new Node(value);
         if(pos==0){
