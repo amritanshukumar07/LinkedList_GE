@@ -13,5 +13,9 @@ public class Main {
         System.out.println("The LL after inserting after a key is: ");
         ll.display();
 
+        ll.deleteAtPos(3);
+        System.out.println("Size of LL after deletion :"+ ll.sizeOfLL() +"\nLinked list after deletion");
+        ll.display();
+
     }
 }

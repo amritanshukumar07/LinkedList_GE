@@ -8,6 +8,44 @@ public class LinkedList {
         newNode.next=head;
         head= newNode;
     }
+    public int sizeOfLL(){
+     int size=0;
+     Node temp=head;
+     while(temp!=null){
+         temp=temp.next;
+         size++;
+     }
+     return size;
+    }
+
+    public void deleteAtPos(int pos) {
+        if (head == null) {
+            System.out.println("Linked List is empty");
+            return;
+        }
+
+        if (pos == 0) {
+            head = head.next;
+            return;
+        }
+
+        Node curr = head;
+        int ind = 0;
+
+        while (ind < pos - 1 && curr != null) {
+            curr = curr.next;
+            ind++;
+        }
+
+        // If the position is out of bounds
+        if (curr == null || curr.next == null) {
+            System.out.println("Invalid position");
+            return;
+        }
+
+        // Update the next pointer to skip the node at the given position
+        curr.next = curr.next.next;
+    }
     public void append(int value){
         Node newNode= new Node(value);
          if(head==null){
