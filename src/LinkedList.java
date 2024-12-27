@@ -60,6 +60,14 @@ public class LinkedList {
         }
         return null;
     }
+    public void insertAfterKey(int key,int value){
+        Node node= findNode(key);
+        Node temp= node.next;
+        Node newNode= new Node(value);
+        node.next=newNode;
+        newNode.next=temp;
+
+    }
     public void insertAtPosition(int pos,int value){
         Node newNode= new Node(value);
         if(pos==0){

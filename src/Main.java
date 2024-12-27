@@ -9,8 +9,9 @@ public class Main {
         ll.append(70);
         System.out.println("Linked List :");
         ll.display();
-        Node node= ll.findNode(70);
-        System.out.println("The Node found with key is "+ node.data);
-     //   ll.display();
+        ll.insertAfterKey(30,40);
+        System.out.println("The LL after inserting after a key is: ");
+        ll.display();
+
     }
 }
