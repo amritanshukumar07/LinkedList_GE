@@ -1,13 +1,31 @@
-public class LinkedList {
-    public Node head;
-    public LinkedList(Node head){
-        this.head=head;
+public class SortedLinkedList {
+    private Node head;
+
+    public SortedLinkedList(Node head) {
+        this.head = head;
     }
-    public void add(int value){
-        Node newNode= new Node(value);
-        newNode.next=head;
-        head= newNode;
+
+    // Add method with sorting logic
+    public void add(int value) {
+        Node newNode = new Node(value);
+
+        if (head == null || head.data > value) {
+            // Insert at the beginning if the list is empty or the new value is smaller
+            newNode.next = head;
+            head = newNode;
+        } else {
+            // Traverse the list to find the correct position
+            Node current = head;
+            while (current.next != null && current.next.data < value) {
+                current = current.next;
+            }
+
+            // Insert the new node at the correct position
+            newNode.next = current.next;
+            current.next = newNode;
+        }
     }
+
     public int sizeOfLL(){
      int size=0;
      Node temp=head;
